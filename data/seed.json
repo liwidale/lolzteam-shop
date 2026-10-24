@@ -1,0 +1,53 @@
+{
+  "users": {
+    "1": {
+      "user_id": 1,
+      "username": "liwi",
+      "token": "demo-token-1",
+      "like_count": 7561,
+      "register_date": "3 июн 2019",
+      "color": "#ffffff",
+      "status": "статусяка",
+      "avatar": "https://nztcdn.com/avatar/m/1792104477/2312422.webp",
+      "name_icon": true,
+      "badges": ["star", "heart"]
+    },
+    "2": {
+      "user_id": 2,
+      "username": "other_user",
+      "token": "demo-token-2",
+      "like_count": 120,
+      "register_date": "3 июн 2019",
+      "color": "#2BAD72",
+      "status": ""
+    }
+  },
+  "threads": {
+    "1": {
+      "thread_id": 1,
+      "user_id": 1,
+      "title": "Demo Shop — аккаунты Steam, Telegram Premium, Spotify",
+      "prefixes": [
+        ["Магазин", "#5c8a4e"],
+        ["Продам", "#4f8fb3"],
+        ["Аккаунты TG", "#4a5450"]
+      ],
+      "tags": ["steam", "telegram", "premium"],
+      "breadcrumbs": ["Форум", "Торговля", "Соц. сети"],
+      "create_date": "16 авг 2026",
+      "view_count": 4424,
+      "deposit": "11 111 ₽",
+      "body": "Добро пожаловать. Выдача моментальная, по всем вопросам пишите в ЛС.\n\n[shop]",
+      "shop": {
+        "currency": "₽",
+        "rules": "1. Перед покупкой уточняйте наличие в ЛС.\n2. Гарантия 24 часа с момента выдачи.\n3. Замена только при записи видео с момента получения.",
+        "items": [
+          { "item_id": "steam10", "title": "Steam аккаунт, 10+ игр", "price": 450, "stock": 12 },
+          { "item_id": "tgprem3", "title": "Telegram Premium, 3 месяца", "price": 1190, "stock": 5 },
+          { "item_id": "spotify", "title": "Spotify Premium, 1 месяц", "price": 290, "stock": 0 }
+        ],
+        "update_date": 1792792260
+      }
+    }
+  }
+}

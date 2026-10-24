@@ -1,0 +1,29 @@
+{
+  "name": "lolzteam-shop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Прототип встроенного магазина темы для Lolzteam: продавец ведёт ассортимент в таблице, а бот меняет остатки через API форума.",
+  "author": "Liwidale",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liwidale/lolzteam-shop.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "bot": "node bot-example.js",
+    "test": "node --test",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "9.36.0",
+    "eslint": "9.36.0",
+    "globals": "15.11.0",
+    "prettier": "3.3.3"
+  }
+}

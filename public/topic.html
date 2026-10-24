@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Тема магазина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6" /></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" /></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24">
+        <path d="M3 4h2l2.4 10.2a1 1 0 001 .8h8.9a1 1 0 001-.8L20 8H6.2" />
+        <circle cx="9" cy="19" r="1.3" />
+        <circle cx="17" cy="19" r="1.3" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6.5" />
+        <path d="M20 20l-4.2-4.2" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M12 4c4.7 0 8 3 8 7s-3.3 7-8 7c-1 0-2-.1-2.9-.4L5 19l1-3.6C4.7 14.2 4 12.7 4 11c0-4 3.3-7 8-7z" />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path d="M6 16V11a6 6 0 1112 0v5l1.5 2h-15z" />
+        <path d="M10 20.5a2 2 0 004 0" />
+      </symbol>
+      <symbol id="i-dots" viewBox="0 0 24 24">
+        <circle cx="5" cy="12" r="1.2" fill="currentColor" />
+        <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+        <circle cx="19" cy="12" r="1.2" fill="currentColor" />
+      </symbol>
+      <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M7 4h10v16l-5-3.5L7 20z" fill="currentColor" /></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" fill="currentColor" stroke="none" />
+      </symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24">
+        <rect x="4" y="5.5" width="16" height="14" rx="1.5" fill="currentColor" stroke="none" />
+        <path d="M8 3.5v4M16 3.5v4" />
+      </symbol>
+      <symbol id="i-pencil" viewBox="0 0 24 24">
+        <path d="M4 20l1-4L16 5l3 3L8 19z" />
+        <path d="M14 7l3 3" />
+      </symbol>
+      <symbol id="i-reply" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8" />
+        <path d="M8.5 10.5h7M8.5 13.5h4.5" />
+      </symbol>
+      <symbol id="i-eyeoff" viewBox="0 0 24 24">
+        <path d="M3 12s3.3-6 9-6 9 6 9 6-3.3 6-9 6-9-6-9-6z" />
+        <circle cx="12" cy="12" r="2.6" />
+        <path d="M4 4l16 16" />
+      </symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h1M4 12h1M4 18h1" /></symbol>
+      <symbol id="i-smile" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M8.5 14a4 4 0 007 0M9 9.5h.01M15 9.5h.01" />
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <circle cx="9" cy="9" r="1.5" />
+        <path d="M20 15l-4-4-8 9" />
+      </symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M4 4l17 8-17 8 3-8z" fill="currentColor" stroke="none" /></symbol>
+      <symbol id="i-shop" viewBox="0 0 24 24">
+        <path d="M4 9l1.5-5h13L20 9" />
+        <path d="M4 9a2.7 2.7 0 005.3 0 2.7 2.7 0 005.4 0A2.7 2.7 0 0020 9" />
+        <path d="M5.5 11.5V20h13v-8.5" />
+        <path d="M10 20v-5h4v5" />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3l7 3v5.5c0 4.4-3 7.7-7 9.5-4-1.8-7-5.1-7-9.5V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </symbol>
+      <symbol id="i-eraser" viewBox="0 0 24 24">
+        <path d="M15 4l5 5-9 9H6l-2-2z" />
+        <path d="M9 10l5 5M11 19h9" />
+      </symbol>
+      <symbol id="i-link" viewBox="0 0 24 24">
+        <path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1" />
+        <path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="i-undo" viewBox="0 0 24 24">
+        <path d="M9 7L5 11l4 4" />
+        <path d="M5 11h9a5 5 0 010 10h-2" />
+      </symbol>
+      <symbol id="i-redo" viewBox="0 0 24 24">
+        <path d="M15 7l4 4-4 4" />
+        <path d="M19 11h-9a5 5 0 000 10h2" />
+      </symbol>
+      <symbol id="i-brackets" viewBox="0 0 24 24"><path d="M9 5H6v14h3M15 5h3v14h-3" /></symbol>
+      <symbol id="i-full" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" /></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M9 4h6l-1 6 3 3H7l3-3z" />
+        <path d="M12 13v7" />
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="5" y="10.5" width="14" height="9.5" rx="1.5" />
+        <path d="M8 10.5V8a4 4 0 018 0v2.5" />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          stroke="none"
+          fill="currentColor"
+          d="m21.5 14.119-3.483-2.119 3.483-2.119a3.181 3.181 0 1 0 -3.362-5.4l-3.138 2.009v-3.49a3 3 0 0 0 -6 0v3.588l-3.138-2.107a3.181 3.181 0 0 0 -3.362 5.4l3.483 2.119-3.483 2.119a3.181 3.181 0 0 0 3.362 5.4l3.138-2.038v3.519a3 3 0 0 0 6 0v-3.58l3.138 2.1a3.181 3.181 0 0 0 3.362-5.4z"
+        />
+      </symbol>
+      <symbol id="i-heartb" viewBox="0 0 24 24">
+        <path stroke="none" fill="currentColor" d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0112 6.6 4.5 4.5 0 0120 9.5c0 6.1-8 11-8 11z" />
+      </symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24">
+        <path d="M4 4h7l9 9-7 7-9-9z" />
+        <circle cx="8.5" cy="8.5" r="1.3" />
+      </symbol>
+    </svg>
+
+    <!-- Шапка форума -->
+    <div class="header">
+      <div class="wrap">
+        <div class="nav">
+          <a class="back" href="#"
+            ><svg class="i"><use href="#i-left" /></svg
+          ></a>
+          <svg class="logo" viewBox="0 0 34 30" fill="currentColor">
+            <path d="M2 22 L8 6 L12 14 L17 2 L22 14 L26 6 L32 22 Q17 30 2 22Z" opacity=".9" />
+          </svg>
+          <a class="item" href="#"
+            ><svg class="i"><use href="#i-cart" /></svg>Маркет</a
+          >
+          <a class="item" href="#">Статьи <span class="dot"></span></a>
+          <a class="item" href="#"
+            >Сервисы <svg class="i"><use href="#i-down" /></svg
+          ></a>
+          <a class="item" href="#"
+            >Соц. сети <svg class="i"><use href="#i-down" /></svg
+          ></a>
+          <a class="item" href="#"
+            >Другое <svg class="i"><use href="#i-down" /></svg
+          ></a>
+          <div class="search">
+            <svg class="i"><use href="#i-search" /></svg>Поиск...
+          </div>
+          <div class="icons">
+            <svg class="i"><use href="#i-chat" /></svg><svg class="i"><use href="#i-bell" /></svg>
+          </div>
+          <div class="me">
+            <span id="meName">Гость</span>
+            <div class="ava" id="meAva" style="width: 30px; height: 30px; font-size: 13px">?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="chips">
+        <span class="chip">Брендинг</span><span class="chip">Магазин - Продам - Акка...</span><span class="chip">Соц. сети</span
+        ><span class="chip">Магазин - Звезды TG - Pr...</span><span class="chip">Важно - Ассортимент и п...</span>
+      </div>
+      <div class="crumbs" id="crumbs"></div>
+
+      <!-- Заголовок темы -->
+      <div class="block head">
+        <div class="prefixes" id="prefixes"></div>
+        <h1 id="title">…</h1>
+        <div class="sub" id="sub"></div>
+        <div class="tags" id="tags"></div>
+      </div>
+
+      <!-- Первое сообщение -->
+      <div class="thread">
+        <div class="bar">
+          <button id="settingsBtn">
+            <svg class="i"><use href="#i-dots" /></svg>Настройки темы
+          </button>
+          <a href="#"
+            ><svg class="i" style="width: 16px; height: 16px"><use href="#i-bookmark" /></svg>Подписаться на тему</a
+          >
+          <div class="menu" id="menu" hidden>
+            <button disabled class="muted">
+              <svg class="i"><use href="#i-pencil" /></svg>Редактировать заголовок
+            </button>
+            <button id="menuShop">
+              <svg class="i"><use href="#i-shop" /></svg>Магазин темы<span class="new">NEW</span>
+            </button>
+            <hr />
+            <button disabled class="muted">
+              <svg class="i"><use href="#i-pin" /></svg>Закрепить в профиле
+            </button>
+            <button disabled class="muted">
+              <svg class="i"><use href="#i-lock" /></svg>Закрыть тему
+            </button>
+            <button disabled class="muted">
+              <svg class="i"><use href="#i-tag" /></svg>Изменить метки
+            </button>
+          </div>
+        </div>
+        <div class="post">
+          <div class="ava-wrap">
+            <div class="ava" id="ava"></div>
+            <div class="badges" id="badges"></div>
+          </div>
+          <div>
+            <div class="who">
+              <span class="name" id="author"></span><span class="online"></span>
+              <span id="status"></span>
+              <span class="stat"
+                ><svg class="i"><use href="#i-heart" /></svg><span id="likes"></span
+              ></span>
+              <span class="stat"
+                ><svg class="i"><use href="#i-cal" /></svg><span id="reg"></span
+              ></span>
+            </div>
+            <button class="more">
+              <svg class="i"><use href="#i-dots" /></svg>
+            </button>
+            <div class="deposit" id="deposit" hidden>
+              <svg class="i" style="width: 18px; height: 18px"><use href="#i-shield" /></svg><span></span>
+            </div>
+            <div class="text" id="body"></div>
+            <div class="foot">
+              <span class="date" id="date"></span>
+              <div class="acts">
+                <button id="editBtn" title="Редактировать">
+                  <svg class="i"><use href="#i-pencil" /></svg>
+                </button>
+                <button title="Ответить">
+                  <svg class="i"><use href="#i-reply" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reply">
+          <div class="ava" id="replyAva">?</div>
+          <div class="field">
+            <span>Напишите ответ...</span><svg class="i"><use href="#i-up" /></svg><svg class="i"><use href="#i-list" /></svg
+            ><svg class="i"><use href="#i-smile" /></svg><svg class="i"><use href="#i-image" /></svg>
+          </div>
+          <button class="send">
+            <svg class="i" style="width: 24px; height: 24px"><use href="#i-send" /></svg>
+          </button>
+        </div>
+      </div>
+      <p class="note">
+        Прототип. Ассортимент хранится на форуме: автор правит его в «Настройки темы → Магазин темы» или бот меняет остатки через API
+        форума, и тема обновляется сразу.
+      </p>
+    </div>
+
+    <!-- Окно магазина -->
+    <div class="overlay" id="shopModal" hidden>
+      <div class="modal wide">
+        <h3>Магазин темы</h3>
+        <div class="content">
+          <div class="field-label">Ассортимент <button class="btn" id="addItem">+ Добавить товар</button></div>
+          <table class="edit-table">
+            <thead>
+              <tr>
+                <th>Название</th>
+                <th class="num" style="width: 120px">Цена, ₽</th>
+                <th class="num" style="width: 110px">Остаток</th>
+                <th style="width: 36px"></th>
+              </tr>
+            </thead>
+            <tbody id="items"></tbody>
+          </table>
+          <div class="hint">Товары с остатком 0 скрываются из темы сами и остаются здесь. Строку «Обновлено» форум ставит сам.</div>
+          <div class="field-label">Правила магазина</div>
+          <textarea class="input" id="rules"></textarea>
+          <details class="spoiler subspoiler">
+            <summary>Для бота автопродаж</summary>
+            <div>
+              <div class="hint" style="margin-top: 0">Тот же токен API форума, без своего сервера и хостинга.</div>
+              <pre id="apiHelp"></pre>
+            </div>
+          </details>
+          <details class="spoiler">
+            <summary>Совместимость с тегом [api]</summary>
+            <div>
+              <div class="hint" style="margin-top: 0">Если тег останется, форум сам отдаёт ссылки для него:</div>
+              <pre id="compat"></pre>
+            </div>
+          </details>
+        </div>
+        <div class="foot">
+          <span class="status" id="shopStatus"></span>
+          <button class="btn green" id="shopSave">Сохранить изменения</button>
+          <button class="btn" data-close>Отмена</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Окно правки сообщения -->
+    <div class="overlay" id="postModal" hidden>
+      <div class="modal">
+        <h3 id="postModalTitle">Редактирование сообщения</h3>
+        <div class="toolbar">
+          <button>
+            <svg class="i"><use href="#i-eraser" /></svg>
+          </button>
+          <button style="font-weight: 800; font-size: 17px">B</button>
+          <button style="font-style: italic; font-size: 17px; font-family: serif">I</button>
+          <button style="text-decoration: line-through; font-size: 17px">S</button>
+          <button style="font-weight: 700">T↕</button>
+          <button>
+            <svg class="i"><use href="#i-list" /></svg>
+          </button>
+          <button>
+            <svg class="i"><use href="#i-link" /></svg>
+          </button>
+          <button>
+            <svg class="i"><use href="#i-image" /></svg>
+          </button>
+          <button style="font-size: 10px; font-weight: 800">GIF</button>
+          <button>
+            <svg class="i"><use href="#i-smile" /></svg>
+          </button>
+          <button class="shopbtn" id="insertShop" data-tip="Магазин темы [shop]">
+            <svg class="i"><use href="#i-shop" /></svg>
+          </button>
+          <button>
+            <svg class="i"><use href="#i-plus" /></svg>
+          </button>
+          <button>
+            <svg class="i"><use href="#i-eyeoff" /></svg>
+          </button>
+          <div class="row2">
+            <button>
+              <svg class="i"><use href="#i-undo" /></svg>
+            </button>
+            <button>
+              <svg class="i"><use href="#i-redo" /></svg>
+            </button>
+            <button>
+              <svg class="i"><use href="#i-brackets" /></svg>
+            </button>
+            <button>
+              <svg class="i"><use href="#i-full" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="content">
+          <textarea class="editor" id="postText"></textarea>
+        </div>
+        <div class="foot">
+          <span class="status" id="postStatus"></span>
+          <button class="btn green" id="postSave">Сохранить изменения</button>
+          <button class="btn" disabled>Расширенный режим...</button>
+          <button class="btn" data-close>Отмена</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const $ = id => document.getElementById(id);
+      const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+      const fmt = n => n.toLocaleString('ru-RU');
+      const ago = unix => {
+        const s = Math.max(0, Math.round(Date.now() / 1000 - unix));
+        if (s < 60) return 'только что';
+        if (s < 3600) return Math.floor(s / 60) + ' мин. назад';
+        if (s < 86400) return Math.floor(s / 3600) + ' ч. назад';
+        return new Date(unix * 1000).toLocaleString('ru-RU', {
+          timeZone: 'Europe/Moscow',
+          day: 'numeric',
+          month: 'short',
+          hour: '2-digit',
+          minute: '2-digit',
+        });
+      };
+      const threadId = location.pathname.match(/^\/threads\/(\d+)/)[1];
+      const base = `/api/threads/${threadId}`;
+      let thread = null,
+        me = null,
+        events = null;
+
+      // Вход по сессии; X-Requested-With защищает изменения от CSRF
+      const api = (path, opts = {}) =>
+        fetch(base + path, { ...opts, headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' } }).then(
+          async r => {
+            const j = await r.json();
+            if (!r.ok) throw Object.assign(new Error(j.errors?.[0] || r.status), { status: r.status });
+            return j;
+          },
+        );
+
+      // Тема
+      function renderThread(t) {
+        thread = t;
+        const c = t.creator;
+        document.title = t.title;
+        $('crumbs').innerHTML = t.breadcrumbs.map(b => `<span>${esc(b)}</span>`).join('');
+        $('prefixes').innerHTML = t.prefixes
+          .map(([n, col]) => `<span class="prefix" style="background:${esc(col)}">${esc(n)}</span>`)
+          .join('');
+        $('title').textContent = t.title;
+        $('sub').innerHTML =
+          `Тема в разделе <span class="g">${esc(t.breadcrumbs.at(-1))}</span> создана пользователем <b style="color:${esc(c.color)}">${nameHtml(c)}</b> <span class="g">${esc(t.create_date)}</span>. · ${fmt(t.view_count)} просмотров`;
+        $('tags').innerHTML = t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join('');
+        paintAva($('ava'), c);
+        $('badges').innerHTML = (c.badges || [])
+          .map(b => `<span class="badge ${esc(b)}"><svg class="i"><use href="#i-${b === 'heart' ? 'heartb' : 'star'}"/></svg></span>`)
+          .join('');
+        $('author').innerHTML = nameHtml(c);
+        $('author').style.color = c.color;
+        $('status').textContent = c.status;
+        $('likes').textContent = fmt(c.like_count);
+        $('reg').textContent = c.register_date;
+        $('date').textContent = t.create_date;
+        if (t.deposit) {
+          $('deposit').hidden = false;
+          $('deposit').querySelector('span').textContent = 'Страховой депозит ' + t.deposit;
+        }
+        renderBody();
+      }
+
+      const nameHtml = u => esc(u.username) + (u.name_icon ? '<svg class="i name-icon"><use href="#i-star"/></svg>' : '');
+      function paintAva(el, u) {
+        el.style.background = u ? (u.avatar ? 'transparent' : u.color) : '';
+        if (u?.avatar) el.innerHTML = `<img src="${esc(u.avatar)}" alt="">`;
+        else el.textContent = u ? u.username[0].toUpperCase() : '?';
+      }
+
+      // [shop] в первом сообщении становится живым блоком магазина
+      function renderBody() {
+        events?.close();
+        events = null;
+        const body = $('body');
+        body.replaceChildren();
+        thread.body
+          .split(/(\[shop\])/)
+          .forEach(part => body.append(part === '[shop]' && thread.shop ? shopBlock() : document.createTextNode(part)));
+      }
+
+      let block = null,
+        prev = new Map(),
+        updateDate = 0;
+      function shopBlock() {
+        block = document.createElement('div');
+        block.className = 'shop';
+        block.innerHTML = `
+    <details class="spoiler" open><summary>Ассортимент</summary><div>
+      <table><thead><tr><th>Товар</th><th class="num">Цена</th><th class="num">В наличии</th></tr></thead><tbody></tbody></table>
+      <div class="meta"><span class="live"></span><span class="upd"></span></div>
+    </div></details>
+    <details class="spoiler"><summary>Правила магазина</summary><div class="rules"></div></details>`;
+        prev = new Map();
+        events = new EventSource(`${base}/shop/events`);
+        const dot = block.querySelector('.live');
+        events.onopen = () => dot.classList.add('on');
+        events.onerror = () => dot.classList.remove('on');
+        events.onmessage = e => renderShop(JSON.parse(e.data));
+        return block;
+      }
+      function renderShop(shop) {
+        const key = i => `${i.title}|${i.price}|${i.stock}`;
+        block.querySelector('tbody').innerHTML = shop.items.length
+          ? shop.items
+              .map(
+                i => `<tr${prev.size && prev.get(i.item_id) !== key(i) ? ' class="flash"' : ''}>
+        <td>${esc(i.title)}</td><td class="num price">${fmt(i.price)} ${esc(shop.currency)}</td><td class="num">${i.stock} шт.</td></tr>`,
+              )
+              .join('')
+          : '<tr><td colspan="3" class="muted">Сейчас всё раскуплено</td></tr>';
+        prev = new Map(shop.items.map(i => [i.item_id, key(i)]));
+        block.querySelector('.rules').textContent = shop.rules || 'Правила не указаны';
+        updateDate = shop.update_date;
+        tick();
+      }
+      const tick = () => block?.isConnected && (block.querySelector('.upd').textContent = 'Обновлено ' + ago(updateDate));
+      setInterval(tick, 15000);
+
+      // Текущий пользователь
+      function setMe(user) {
+        me = user;
+        $('meName').innerHTML = user ? nameHtml(user) : 'Гость';
+        for (const id of ['meAva', 'replyAva']) paintAva($(id), user);
+        // Магазин и правку сообщения видит только автор
+        const isAuthor = !!user && user.user_id === thread.creator.user_id;
+        $('menuShop').hidden = $('editBtn').hidden = !isAuthor;
+      }
+
+      // Всплывающие окна
+      const open = id => {
+        $(id).hidden = false;
+        $('menu').hidden = true;
+      };
+      const close = el => {
+        el.closest('.overlay').hidden = true;
+        if (location.pathname.endsWith('/shop/edit')) history.replaceState(null, '', `/threads/${threadId}/`);
+      };
+      document.querySelectorAll('.overlay').forEach(o => {
+        o.addEventListener('mousedown', e => e.target === o && close(o));
+        o.querySelectorAll('[data-close]').forEach(b => (b.onclick = () => close(b)));
+      });
+      document.addEventListener('keydown', e => e.key === 'Escape' && document.querySelectorAll('.overlay:not([hidden])').forEach(close));
+      $('settingsBtn').onclick = e => {
+        e.stopPropagation();
+        $('menu').hidden = !$('menu').hidden;
+      };
+      document.addEventListener('click', e => !$('menu').contains(e.target) && ($('menu').hidden = true));
+
+      function setStatus(id, text, kind = '') {
+        $(id).className = 'status ' + kind;
+        $(id).textContent = text;
+      }
+
+      // Окно магазина
+      let shop = null;
+      function itemRow(i = { title: '', price: '', stock: '' }) {
+        const tr = document.createElement('tr');
+        tr.dataset.id = i.item_id || '';
+        tr.innerHTML = `<td><input class="input n" placeholder="Название товара"></td>
+    <td><input class="input p" type="number" min="0" step="any" style="text-align:right"></td>
+    <td><input class="input s" type="number" min="0" step="1" style="text-align:right"></td>
+    <td><button class="del" title="Удалить"><svg class="i" style="width:16px;height:16px"><use href="#i-x"/></svg></button></td>`;
+        tr.querySelector('.n').value = i.title;
+        tr.querySelector('.p').value = i.price;
+        tr.querySelector('.s').value = i.stock;
+        tr.querySelector('.del').onclick = () => {
+          tr.remove();
+          setStatus('shopStatus', 'Есть несохранённые изменения');
+        };
+        tr.oninput = () => setStatus('shopStatus', 'Есть несохранённые изменения');
+        return tr;
+      }
+      function fillShop(s) {
+        shop = s;
+        $('items').replaceChildren(...s.items.map(itemRow));
+        $('rules').value = s.rules;
+        const API = 'https://api.lolz.team',
+          item = s.items[0]?.item_id || 'ITEM_ID';
+        $('apiHelp').textContent = `# продажа: списать 1 шт.
+curl -X POST ${API}/threads/${threadId}/shop/items/${item}/sold -H "Authorization: Bearer ТОКЕН" -d "qty=1"
+
+# выставить остаток
+curl -X PATCH ${API}/threads/${threadId}/shop/items/${item} -H "Authorization: Bearer ТОКЕН" -d "stock=20"
+
+# в прототипе вместо ${API} адрес ${location.origin}/api`;
+        $('compat').textContent = `[spoiler=Ассортимент][api]${API}/threads/${threadId}/shop/assortment.txt[/api][/spoiler]
+[spoiler=Правила магазина][api]${API}/threads/${threadId}/shop/rules.txt[/api][/spoiler]`;
+      }
+      async function openShop() {
+        open('shopModal');
+        setStatus('shopStatus', '');
+        try {
+          fillShop((await api('/shop/manage')).shop);
+        } catch (e) {
+          $('items').replaceChildren();
+          setStatus('shopStatus', e.message, 'err');
+        }
+      }
+      $('menuShop').onclick = openShop;
+      $('addItem').onclick = () => {
+        const r = itemRow();
+        $('items').append(r);
+        r.querySelector('.n').focus();
+      };
+      $('shopSave').onclick = async () => {
+        if (!shop) return;
+        const items = [...$('items').children].map(tr => ({
+          item_id: tr.dataset.id,
+          title: tr.querySelector('.n').value,
+          price: Number(tr.querySelector('.p').value),
+          stock: Number(tr.querySelector('.s').value),
+        }));
+        try {
+          fillShop(
+            (
+              await api('/shop', {
+                method: 'PUT',
+                body: JSON.stringify({ items, rules: $('rules').value, base_update_date: shop.update_date }),
+              })
+            ).shop,
+          );
+          setStatus('shopStatus', 'Сохранено, тема уже обновилась', 'ok');
+        } catch (e) {
+          setStatus('shopStatus', e.message, 'err');
+        }
+      };
+
+      // Окно правки сообщения
+      function openPost() {
+        open('postModal');
+        $('postModalTitle').textContent = 'Редактирование сообщения от ' + thread.creator.username;
+        $('postText').value = thread.body;
+        setStatus('postStatus', '');
+        $('postText').focus();
+      }
+      $('editBtn').onclick = openPost;
+      $('insertShop').onclick = () => {
+        const ta = $('postText'),
+          [a, b] = [ta.selectionStart, ta.selectionEnd];
+        ta.setRangeText('[shop]', a, b, 'end');
+        ta.focus();
+      };
+      $('postSave').onclick = async () => {
+        try {
+          renderThread((await api('/post', { method: 'PUT', body: JSON.stringify({ post_body: $('postText').value }) })).thread);
+          $('postModal').hidden = true;
+        } catch (e) {
+          setStatus('postStatus', e.message, 'err');
+        }
+      };
+
+      (async () => {
+        renderThread((await fetch(base).then(r => r.json())).thread);
+        setMe((await fetch('/api/me').then(r => r.json())).user);
+        if (location.pathname.endsWith('/shop/edit') && me) openShop();
+      })();
+    </script>
+  </body>
+</html>
